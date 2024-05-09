@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <button
+      onclick="
+    let randomNumber=Math.random() * 3;
+    let computerChoice;
+
+    if(randomNumber > 0 && randomNumber <= 1){
+         computerChoice='Bat';
+    }else if(randomNumber >1 && randomNumber <=2){
+         computerChoice='Ball';
+    }else{
+         computerChoice='Stump';
+    }
+    const computerChoiceMessage=`Computer choice is ${computerChoice}`;
+
+    let resultMessage;
+
+    if(computerChoice === 'Ball'){
+        resultMessage='User Won';
+    }else if(computerChoice === 'Bat'){
+        resultMessage=`It's a tie`;
+    }else if(computerChoice === 'Stump'){
+        resultMessage=`Computer won`;
+    }
+
+    alert(`User choice is Bat. Computer choice is ${computerChoice} and ${resultMessage}`);
+    "
+      style="padding: 10px; position: relative"
+    >
+      <img
+        src="./images/bat.png"
+        alt="Bat Icon"
+        style="
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          left: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+        "
+      />
+    </button>
+
+    <button
+      onclick="
+     randomNumber=Math.random() * 3;
+    if(randomNumber > 0 && randomNumber <= 1){
+         computerChoice='Bat';
+    }else if(randomNumber >1 && randomNumber <=2){
+         computerChoice='Ball';
+    }else{
+         computerChoice='Stump';
+    }
+
+    if(computerChoice === 'Ball'){
+        resultMessage=`It's a tie`;
+    }else if(computerChoice === 'Bat'){
+        resultMessage=`Computer won`;
+    }else if(computerChoice === 'Stump'){
+        resultMessage=`User won`;
+    }
+
+    alert(`User choice is Ball. Computer choice is ${computerChoice} and ${resultMessage}`);
+    "
+      style="padding: 10px; position: relative"
+    >
+      <img
+        src="./images/ball.png"
+        alt="Bat Icon"
+        style="
+          width: 35px;
+          height: 30px;
+          position: absolute;
+          left: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+        "
+      />
+    </button>
+
+    <button
+      onclick="
+    randomNumber=Math.random() * 3;
+   if(randomNumber > 0 && randomNumber <= 1){
+        computerChoice='Bat';
+   }else if(randomNumber >1 && randomNumber <=2){
+        computerChoice='Ball';
+   }else{
+        computerChoice='Stump';
+   }
+
+   if(computerChoice === 'Ball'){
+       resultMessage=`Computer won`;
+   }else if(computerChoice === 'Bat'){
+       resultMessage=`User won`;
+   }else if(computerChoice === 'Stump'){
+       resultMessage=`It's a tie`;
+   }
+
+   alert(`User choice is Stump. Computer choice is ${computerChoice} and ${resultMessage}`);
+   "
+      style="padding: 10px; position: relative"
+    >
+      <img
+        src="./images/stump.png"
+        alt="Bat Icon"
+        style="
+          width: 35px;
+          height: 30px;
+          position: absolute;
+          left: 5px;
+          top: 50%;
+          transform: translateY(-50%);
+        "
+      />
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
